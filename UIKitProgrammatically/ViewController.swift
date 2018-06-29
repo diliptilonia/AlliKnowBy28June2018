@@ -44,14 +44,14 @@ class ViewController: UIViewController {
         myButton.setTitle("Click Here", for: .normal)
         myButton.setTitleColor(UIColor.black, for: .focused)
         myButton.backgroundColor = .red
-        myButton.frame = CGRect(x: 30, y: 30, width: 100, height: 30)
+        myButton.frame = CGRect(x: 30, y: 300, width: 100, height: 30)
         myButton.addTarget(self, action: #selector(ViewController.myButtonClicked(_:)), for: .touchUpInside)
         view.addSubview(myButton)
     }
     
     func createLabel() {
         let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 29, y: 50, width: 150, height: 39)
+        myLabel.frame = CGRect(x: 100, y: 50, width: 150, height: 39)
         myLabel.text = "Hello this is text"
         myLabel.textColor = .brown
         view.addSubview(myLabel)

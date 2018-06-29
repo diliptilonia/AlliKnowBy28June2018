@@ -11,6 +11,10 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var contactNameTextField: UITextField!
+    @IBAction func goToCV(_ sender: UIButton) {
+        print("Button working fine")
+        performSegue(withIdentifier: "segue3", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
