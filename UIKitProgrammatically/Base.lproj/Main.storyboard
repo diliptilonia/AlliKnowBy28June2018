@@ -183,6 +183,31 @@
                                     <outlet property="delegate" destination="cF7-gF-WuY" id="gJs-iQ-SfU"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iF0-ym-8DH">
+                                <rect key="frame" x="65" y="233" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8y-nx-Bgm">
+                                <rect key="frame" x="65" y="392" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="32"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.97077744529999999" blue="0.59049305649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickeToChoesImage:" destination="cF7-gF-WuY" eventType="touchUpInside" id="qw5-Zx-QMu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awR-WD-lmR">
+                                <rect key="frame" x="90" y="593" width="174" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="gotoGesturePage:" destination="cF7-gF-WuY" eventType="touchUpInside" id="wvl-0J-UCY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -196,13 +221,30 @@
                         <viewLayoutGuide key="safeArea" id="jKu-N9-1XL"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="iF0-ym-8DH" id="Usd-b2-yUj"/>
                         <outlet property="textfield1" destination="hR5-AX-GXP" id="7Zj-Q6-kA3"/>
                         <outlet property="textfield2" destination="rAT-bB-z6G" id="4IY-g8-RIL"/>
+                        <segue destination="S1e-bR-mMX" kind="show" identifier="segue5" id="IJD-sq-Phj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n01-rq-tds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3864.8000000000002" y="-224.4377811094453"/>
+        </scene>
+        <!--Guesture View Controller-->
+        <scene sceneID="OiF-jf-llz">
+            <objects>
+                <viewController id="S1e-bR-mMX" customClass="guestureViewController" customModule="UIKitProgrammatically" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9E8-9f-PR7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nmF-OB-Z1F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tI-hx-EyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4534" y="-222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PLS-uw-wc2">

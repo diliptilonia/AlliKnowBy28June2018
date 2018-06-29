@@ -8,7 +8,20 @@
 
 import UIKit
 
-class CGAViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class CGAViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBAction func gotoGesturePage(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var imageView: UIImageView!
+    let imagePicker = UIImagePickerController()
+
+    @IBAction func clickeToChoesImage(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     let itemList = ["Item1", "Item2", "Item3"]
     let gender = ["Male", "Female"]
     
@@ -21,6 +34,7 @@ class CGAViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
         
         picker.dataSource = self
         picker.delegate = self
@@ -76,5 +90,15 @@ class CGAViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         }
     }
   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.image = pickedImage
+        }
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true) {
+            print("User din't picked the image")
+        }
+    }
 
 }
