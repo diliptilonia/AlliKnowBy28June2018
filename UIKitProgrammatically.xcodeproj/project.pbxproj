@@ -13,6 +13,7 @@
 		890E68A020E539800039AAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 890E689F20E539800039AAE3 /* Assets.xcassets */; };
 		890E68A320E539800039AAE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890E68A120E539800039AAE3 /* LaunchScreen.storyboard */; };
 		890E68AB20E549FF0039AAE3 /* 2ndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E68AA20E549FF0039AAE3 /* 2ndViewController.swift */; };
+		89D7474F20E5CB4200E67601 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7474E20E5CB4200E67601 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		890E68A220E539800039AAE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		890E68A420E539800039AAE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		890E68AA20E549FF0039AAE3 /* 2ndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2ndViewController.swift; sourceTree = "<group>"; };
+		89D7474E20E5CB4200E67601 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				890E689820E5397F0039AAE3 /* AppDelegate.swift */,
 				890E689C20E5397F0039AAE3 /* Main.storyboard */,
 				890E689A20E5397F0039AAE3 /* ViewController.swift */,
+				89D7474E20E5CB4200E67601 /* DetailViewController.swift */,
 				890E68AA20E549FF0039AAE3 /* 2ndViewController.swift */,
 				890E689F20E539800039AAE3 /* Assets.xcassets */,
 				890E68A120E539800039AAE3 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				890E68AB20E549FF0039AAE3 /* 2ndViewController.swift in Sources */,
 				890E689B20E5397F0039AAE3 /* ViewController.swift in Sources */,
 				890E689920E5397F0039AAE3 /* AppDelegate.swift in Sources */,
+				89D7474F20E5CB4200E67601 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

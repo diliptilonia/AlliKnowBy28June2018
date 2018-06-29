@@ -11,16 +11,21 @@ import UIKit
 class _ndViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var myTableView = UITableView()
     var contacts = [String]()
+    var index: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     let urlString = URL(string: "http://jsonplaceholder.typicode.com/users")
+        let urlString = URL(string: "https://jsonplaceholder.typicode.com/users")
         if let url = urlString {
             let task = URLSession.shared.dataTask(with: url) { (data, responce, error) in
                 let json = try! JSONSerialization.jsonObject(with: data!, options: [])
                 let wholeData = json as! NSArray
-                self.contacts = wholeData.value(forKey: "name") as! [NSString] as [String]
+                self.contacts = wholeData.value(forKey: "name") as! [String]
                 print(self.contacts)
+                DispatchQueue.main.async {
+                    //                    self.activatorIdicator.stopAnimating()
+                    self.myTableView.reloadData()
+                }
             }
             task.resume()
         }
@@ -50,6 +55,14 @@ class _ndViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = myTableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.textLabel?.text = contacts[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Go going on next page")
+        index = indexPath.row
+        sendDataToDetailView.name = contacts[indexPath.row]
+        
+        
+        performSegue(withIdentifier: "segue2", sender: self)
     }
     
 
