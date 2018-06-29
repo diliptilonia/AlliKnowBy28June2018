@@ -9,14 +9,40 @@
 import UIKit
 
 class guestureViewController: UIViewController {
+    
+    @IBOutlet weak var tapView: UIView!
+    @IBOutlet weak var pinchView: UIView!
+    @IBOutlet weak var swipeView: UIView!
+    @IBOutlet weak var rotateView: UIView!
+    @IBOutlet weak var longPressView: UIView!
+    @IBOutlet weak var panView: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        gestures()
+        
     }
     
-
-
+    func gestures() {
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped(swipe:)))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swiped(swipe:)))
+        swipeRight.direction = .right
+        swipeLeft.direction = .left
+        swipeView.addGestureRecognizer(swipeLeft)
+        swipeView.addGestureRecognizer(swipeRight)
+    }
+   
+    @objc func swiped(swipe: UISwipeGestureRecognizer) {
+        switch swipe.direction {
+        case .left:
+            print("swiped left")
+        case .right:
+            print("Swiped Right")
+        default:
+            print("Din't swipe")
+        }
+    }
 
 }

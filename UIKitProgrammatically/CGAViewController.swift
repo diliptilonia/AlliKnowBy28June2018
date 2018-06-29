@@ -11,6 +11,7 @@ import UIKit
 class CGAViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBAction func gotoGesturePage(_ sender: UIButton) {
+        performSegue(withIdentifier: "segue5", sender: self)
     }
     
     @IBOutlet weak var imageView: UIImageView!
